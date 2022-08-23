@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Крим.Реалії</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="onion-location" content="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion">
+    <script src="../main.js?h=8d0955fd"></script>
+    <link rel="stylesheet" href="../fonts.css?h=dc7b7e35">
+    <link rel="icon" href="../custom/rferl/favicon_rferl.svg?h=d226500d">
+    <style>
+     body {
+       background-color: #fcfdfb;
+       font-family: NotoSans;
+       margin: 0;
+     }
+     h1 {
+       font-size: 44px;
+       font-family: NotoSansBlack;
+     }
+     h2 {
+       font-size: 30px;
+       font-family: NotoSansBold;
+     }
+     a {
+       text-decoration: none;
+       color: #BB5402ff;;
+     }
+     p {
+       font-size: 18px;
+     }
+     #navigation-container {
+       display: flex;
+       justify-content: space-between;
+       padding: 0 2%;
+     }
+     #site-header {
+       background-color: #BB540213;;
+       padding: 0;
+     }
+     #nav-list, #nav-list-mobile {
+       list-style-type: none;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       display: inline;
+       text-align: center;
+       vertical-align: top !important;
+       //padding-left: 14%;
+       padding-left: 0;
+     }
+     #site-header li {
+       padding: 16px;
+       display: inline;
+       list-style-type: none;
+     }
+     #site-header li a {
+       color: black;
+       line-height: 90px;
+       padding: 5px 15px;
+     }
+     .shape {
+       position: absolute;
+       overflow: hidden;
+       height: 80px;
+       width: 100%;
+     }
+     .shape::before {
+       border-radius: 100%;
+       position: absolute;
+       background: #BB540213;;
+       right: -200px;
+       left: -200px;
+       top: -200px;
+       content: '';
+       bottom: 0;
+       z-index: -100;
+     }
+     #content {
+       margin: 0 auto;
+       margin-bottom: 6%;
+     }
+     #header-container {
+       background-color: #BB540213;;
+       margin: 0;
+       padding-left: 10%;
+       padding-right: 8%;
+     }
+     #header-container * {
+       margin: 0;
+     }
+     #header-container header {
+       max-width: 1200px;
+       margin: 0 auto;
+     }
+     #page-content {
+       max-width: 1200px;
+       margin: 2% auto;
+       margin-bottom: 72px;
+       width: 82vw;
+       border-radius: 13px;
+       background-color: white;
+       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+       padding: 3% 5%;
+       box-sizing: border-box;
+     }
+     .parent {
+       display: flex;
+       justify-content: space-between;
+     }
+     #steps-container {
+       width: 82vw;
+       margin: 0 auto;
+       max-width: 1200px;
+     }
+     #steps-container > .parent {
+       margin-bottom: 72px;
+     }
+     .step-text {
+       width: 50%;
+     }
+     .onion-url-container {
+       background-color: #EA69031a;;
+       display: inline-block;
+       padding: 1%;
+       border-radius: 10px;
+       padding-right: 8px;
+     }
+     .onion-url-container:hover {
+       background-color: #EA690340;;
+
+       /* The .button:hover rule underlines the whitespace in the url container, we don't want that */
+       text-decoration: none !important;
+     }
+     .onion-url-container:hover span {
+       text-decoration: underline;
+     }
+     .onion-url-container:active {
+       background-color: #EA690366;;
+     }
+     .onion-url-container p {
+       color: #BB5402ff;;
+       display: inline;
+     }
+     .button {
+       background-color: #EA6903ff;;
+       padding: 0 24px 16px 24px;
+       border-radius: 100px;
+       box-shadow: 2px 4px #EA690333;;
+       font-family: NotoSansSemibold;
+       height: 40px;
+       width: max-content;
+       color: white;
+       display: inline-block;
+     }
+     .button:hover {
+       background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #EA6903ff;;
+     }
+     .button:active {
+       background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #EA6903ff;;
+     }
+     .button a {
+       color: white;
+     }
+     a:hover {
+       text-decoration: underline;
+     }
+     a.button:hover {
+       text-decoration: none;
+     }
+     .onion-glyph-download {
+       height: 20px;
+       width: 20px;
+       padding: 10px;
+       padding-top: 5px;
+       transform: translateY(11px);
+       filter: invert(100%) sepia(0%) saturate(7468%) hue-rotate(246deg) brightness(105%) contrast(101%);
+       background-size: contain;
+       display: inline-block;
+       background: url(../onion-glyph.svg?h=5a504140);
+       background-size: 24px;
+       background-repeat: no-repeat;
+       background-position: center;
+     }
+     .onion-url-lock {
+       transform: translateY(4px);
+       filter: invert(61%) sepia(13%) saturate(2434%) hue-rotate(3deg) brightness(105%) contrast(105%);
+       display: inline-block;
+       background-image: url(../onion-site-lock.svg?h=b66d07d8);
+       width: 32px;
+       height: 32px;
+       background-repeat: no-repeat;
+       background-size: contain;
+     }
+     #support-footer {
+       width: 100%;
+       background-color: white;
+       box-shadow: 0 0 30px #0000001a;
+       padding-top: 5%;
+       padding-bottom: 5%;
+     }
+     .chevron-down {
+       background-image: url(../chevron-down-solid.svg?h=d94c7f5b);
+       width: 20px;
+       height: 20px;
+       background-repeat: no-repeat;
+       float: right;
+     }
+     summary.no-marker {
+       list-style: none;
+     }
+     details[open] > summary > i.chevron-down {
+       transform: rotate(180deg);
+     }
+     details.collapsible-text > summary {
+       font-weight: bold;
+       background-color: rgba(0, 0, 0, 0.03);
+       padding: 2%;
+       border-radius: 5px;
+       font-size: 1em;
+       border: 1px solid rgba(0, 0, 0, 0.05);
+     }
+     details[open].collapsible-text > summary {
+       border-radius: 5px 5px 0 0;
+     }
+     details.collapsible-text {
+       border-radius: 5px;
+       border: 1px solid rgba(0, 0, 0, 0.05);
+     }
+     details.collapsible-text > summary:hover {
+       background-color: rgba(0, 0, 0, 0.09);
+       cursor: pointer;
+     }
+     details.collapsible-text > summary:active {
+       background-color: rgba(0, 0, 0, 0.15);
+     }
+     details.collapsible-text > div.details-container {
+       padding: 0 5%;
+       color: rgba(0, 0, 0, 0.54);
+     }
+     .onion-url-desktop {
+       display: none !important;
+       font-size: 1em;
+     }
+     .onion-url-desktop, .onion-url-mobile {
+       font-weight: bold;
+       font-size: 16px;
+       padding: 2%;
+       padding-right: 24px;
+     }
+     .social-button {
+       margin-top: 2%; margin-bottom: 5%; display: inline; margin-right: 2%;
+     }
+     #footer-container {
+       margin: 0 auto;
+       text-align: center;
+       width: 36vw;
+       max-width: 1200px;
+     }
+     #steps-container > div.parent:nth-child(2n) {
+       flex-direction: row-reverse;
+     }
+     #footer-container > img:first-child {
+       width: 175px;
+       height: 175px;
+     }
+     .details-container li {
+       font-size: 18px;
+     }
+     .details-container h3 {
+       font-weight: bold;
+     }
+     .child.step-text h2 {
+       margin-bottom: 16px;
+     }
+     .child.step-text details {
+       margin-top: 32px;
+     }
+     .circle-bg {
+       display: inline-block;
+       width: 275px;
+       height: 275px;
+       position: absolute;
+       background-color: #EA69031a;;
+       z-index: -1;
+       border-radius: 100%;
+     }
+     #site-intro {
+       display: inline-block;
+       margin-top: 2%;
+     }
+     .onion-glyph-download.rtl-show {
+       display: none;
+     }
+     .social-button img.rtl-show {
+       display: none;
+     }
+     .onion-url-desktop span {
+       display: inline-block;
+       transform: translateY(-7px);
+     }
+     #download-tor-button {
+       margin-top: 2%;
+       margin-bottom: 5%;
+     }
+     #os-span-data {
+       display: none !important;
+     }
+     #language-select:hover #language-dropdown {
+       display: block;
+     }
+     #language-dropdown {
+       overflow: auto;
+       max-height: 70vh;
+     }
+     #site-logo > img {
+       height: 66px;
+       padding-top: 20px;
+     }
+     .dropdown-item:hover {
+       background-color: #EA690340;;
+     }
+
+     /* tablet */
+     /* some of these rules aren't overriden on mobile, so they affect mobile too*/
+     @media (max-width: 999px) {
+       .button {
+         height: 32px;
+         padding-bottom: 24px;
+       }
+       .child > img {
+         width: 275px;
+       }
+       h1 {
+         font-size: 2em;
+       }
+       h2 {
+         font-size: 1.5em;
+       }
+       #footer-container {
+         width: 90vw;
+       }
+       #steps-container {
+         width: 90vw;
+       }
+       #nav-list {
+         display: none;
+       }
+       #nav-list-mobile {
+         margin-bottom: 0;
+         margin-top: 0;
+         padding: 3% 0 3% 0 !important;
+         justify-content: space-around;
+         background-color: #EA690326;;
+         display: block;
+       }
+       #nav-list > li, #nav-list-mobile > li  {
+         margin: 0;
+         padding: 0;
+       }
+       #nav-list > li > a, #nav-list-mobile > li > a {
+         padding-top: 0 !important;
+         padding-bottom: 0 !important;
+         line-height: initial !important;
+       }
+       #language-select {
+         position: absolute;
+         top: 0;
+         right: 0;
+         margin-top: 1.5% !important;
+         margin-right: 26px;
+       }
+       #language-select-button {
+         height: 48px;
+         padding-left: 20px;
+         padding-right: 24px;
+         padding-bottom: 0;
+       }
+       #language-select-text {
+           padding-top: 15px;
+       }
+       #nav-list li a, #nav-list-mobile li a {
+         color: #BB5402ff;;
+         font-weight: bolder;
+       }
+       h1 {
+         font-size: 32px;
+       }
+       h2 {
+         font-size: 28px;
+       }
+       h3 {
+         font-size: 18px;
+       }
+       p {
+         font-size: 16px;
+       }
+       .button {
+         font-size: 14px;
+       }
+       .social-button:first-child {
+         margin-right: 16px !important;
+       }
+       #social-button-container {
+         justify-content: center !important;
+       }
+       #header-container {
+         padding-top: 7%;
+         padding-bottom: 5%;
+       }
+       .details-container li {
+         font-size: 16px;
+       }
+       #site-logo > img {
+         padding-top: 10px;
+         padding-bottom: 10px;
+       }
+     }
+
+     /* desktop */
+     @media (min-width: 1000px) {
+       .onion-url-desktop {
+         display: inline-block !important;
+       }
+       .onion-url-mobile {
+         display: none !important;
+       }
+       .circle-bg {
+         width: 400px;
+         height: 400px;
+       }
+       #nav-list {
+         margin-top: 0;
+         padding-top: 0;
+         display: flex !important;
+       }
+       #nav-list-mobile {
+         display: none;
+       }
+       #site-logo > img {
+         height: 96px;
+       }
+     }
+
+     /* mobile */
+     @media(max-width: 650px) {
+       #download-tor-button {
+         text-align: center;
+       }
+       div.onion-url {
+         text-align: center;
+         padding-top: 16px;
+         padding-bottom: 16px;
+       }
+       #site-intro {
+         width: unset !important;
+         padding-top: 15% !important;
+       }
+       #steps-container > div.parent {
+         flex-direction: column-reverse !important;
+       }
+       .step-text {
+         width: 100%;
+       }
+       .social-button {
+         display: block;
+       }
+       .social-button:not(last-child) {
+         margin-bottom: 2%;
+       }
+       #social-button-container {
+         flex-direction: column;
+       }
+       #header-image {
+         display: none !important;
+       }
+       #header-container {
+         display: block;
+       }
+       #header-container > div.child:first-child {
+         display: block !important;
+         width: 90vw;
+         margin: 0 auto !important;
+         padding-top: 2%;
+       }
+       #page-content {
+         width: 90vw;
+       }
+       #language-dropdown {
+         width: 90vw;
+         padding: 15% 15% 15% 15%;
+       }
+       #language-select {
+         margin-top: 3.5% !important;
+       }
+       #language-select-button {
+         height: 40px;
+       }
+       #language-select-text {
+         padding-top: 12px !important;
+       }
+       /* center step images for mobile */
+       #steps-container div.child > img {
+         display: block;
+         margin: 0 auto;
+       }
+       .circle-bg {
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+       }
+       .details-container li {
+         font-size: 14px;
+       }
+       p {
+         font-size: 14px;
+       }
+       summary {
+         font-size: 0.8em !important;
+       }
+       #site-logo > img {
+         padding-top: 10px;
+         padding-bottom: 10px;
+       }
+       #nav-list-mobile {
+         padding: 5% 0 5% 0 !important;
+       }
+     }
+
+     .social-button img {
+       height: 20px;
+       width: 20px;
+       padding: 10px;
+       padding-top: 10px;
+       padding-top: 10px;
+       padding-top: 5px;
+       transform: translateY(13px);
+       filter: invert(100%) sepia(0%) saturate(7468%) hue-rotate(246deg) brightness(105%) contrast(101%);
+       background-size: contain;
+       display: inline-block;
+     }
+     #social-button-container {
+       display: flex;
+       justify-content: space-around;
+     }
+
+     #language-select {
+       margin-top: 1%;
+       border: none;
+     }
+     #language-select i.chevron-down {
+       filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(258deg) brightness(104%) contrast(102%);
+     }
+     #language-dropdown {
+       background-color: white;
+       position: absolute;
+       box-sizing: border-box;
+       right: 2%;
+       display: none;
+       border-radius: 15px;
+       z-index: 1;
+       box-shadow: 0 0 20px 0 rgba(0,0,0, .2);
+     }
+     .dropdown-item {
+       display: block;
+       text-decoration: none;
+       color: black;
+       padding-left: 24px;
+       padding-right: 24px;
+     }
+     .dropdown-item:not(:first-child) {
+       padding-top: 10px;
+     }
+     .dropdown-item:first-child {
+       padding-top: 24px;
+     }
+     .dropdown-item:not(:last-child) {
+       padding-bottom: 10px;
+     }
+     .dropdown-item:last-child {
+       padding-bottom: 24px;
+     }
+     #language-select-button {
+       border: none;
+       width: 100px;
+     }
+     #language-select-text {
+       padding-top: 17px;
+     }
+
+     #site-description {
+       margin-top: 2%;
+       margin-bottom: 2%;
+     }
+     #page-content h2 {
+       margin-top: 0;
+     }
+
+     .onion-url-desktop .onion-url-span-uncopied {
+       display: none;
+     }
+     .onion-url-desktop .onion-url-span-copied {
+       display: none;
+       margin-top: 15px !important;
+     }
+
+     .onion-url-mobile {
+       width: max-content;
+     }
+     .onion-url-mobile .onion-url-span-uncopied {
+       display: none;
+       transform: translateY(-7px);
+     }
+     .onion-url-mobile .onion-url-span-copied {
+       display: none;
+       margin-top: 7px;
+     }
+    </style>
+    
+    <link rel="stylesheet" href="../rtl.css?h=31c9301d">
+    
+  </head>
+  <body dir="RTL">
+    
+  <div id="os-span-data">
+    <span id="ios-browser-name">Onion Browser</span>
+    
+      <span data-os-name="ipad">For iOS</span>
+    
+      <span data-os-name="iphone">For iOS</span>
+    
+      <span data-os-name="linux">For Linux</span>
+    
+      <span data-os-name="x11">For Linux</span>
+    
+      <span data-os-name="mac">For Mac OS</span>
+    
+      <span data-os-name="windows">For Windows</span>
+    
+  </div>
+
+    <div id="site-header">
+  <div id="navigation-container">
+    <div id="site-logo">
+      <img src="../custom/rferl/logo_rferl_ukrainian_en.svg?h=0c288253" alt="Крим.Реалії" title="Крим.Реалії">
+    </div>
+    <ul id="nav-list">
+      <li><a href="#step1">ښکته کول</a></li>
+      <li><a href="#step2">نښلول</a></li>
+      <li><a href="#step3">لاسرسی</a></li>
+      <li><a href="#support-footer">ملاتړ</a></li>
+    </ul>
+    
+    <div id="language-select" onmouseleave="hideLanguageSelect()">
+      <div id="language-select-button" class="button" onmouseover="showLanguageSelect()" onmousedown="clickHandler()">
+        <div id="language-select-text">پښتو<i class="chevron-down"></i></div>
+      </div>
+      <div id="language-dropdown">
+        
+        
+
+        
+          <a href="../en/" class="dropdown-item">English (en)</a>
+        
+          <a href="../" class="dropdown-item">українська (uk)</a>
+        
+      </div>
+    </div>
+    
+  </div>
+  <ul id="nav-list-mobile">
+    <li><a href="#step1">ښکته کول</a></li>
+    <li><a href="#step2">نښلول</a></li>
+    <li><a href="#step3">لاسرسی</a></li>
+    <li><a href="#support-footer">ملاتړ</a></li>
+  </ul>
+</div>
+    <div id="content">
+      <div id="header-container">
+        <header class="parent">
+          <div class="child" id="site-intro">
+            <h1>د Крим.Реалії د بلاک کېدو د لري کولو لپاره معلومات</h1>
+            <div id="site-description">
+              <p><a href="https://ua.krymr.com">https://ua.krymr.com</a> ته لاسرسی نه شي لرلای؟<br>
+په دغه پاڼه کې دا جزئیات راغلي چې څرنګه کولای شئ د سانسور مخه ونیسئ.</p>
+
+            </div>
+            <div class="onion-url"><a href="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
+    <i class="onion-url-lock"></i>
+    <span class="onion-url-span">https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion</span>
+    <span class="onion-url-span-uncopied">پیازي پته کاپي کړئ</span>
+    <span class="onion-url-span-copied">کاپي شو!</span>
+  </a>
+  <a href="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
+    <i class="onion-url-lock"></i>
+    <span class="onion-url-span">د  [Service Name] .onion سایټ نه لیدنه وکړئ</span>
+    <span class="onion-url-span-uncopied">پیازي پته کاپي کړئ</span>
+    <span class="onion-url-span-copied">کاپي شو!</span>
+  </a>
+</div>
+          </div>
+          <div class="child">
+            <img src="../header-tor.png?h=14e4d965" id="header-image">
+          </div>
+        </header>
+      </div>
+      <div class="shape"></div>
+      <div id="page-content">
+        <h2>په Tor سره د سانسور مخنیوی وکړئ</h2>
+        <p>Tor خلکو ته یوه داسې لاره ورکوي څو وکولای شي انټرنېټ په ناپیژانده توګه سره وګوري او له خلکو سره مرسته کوي <strong>چې له دواړو سانسور او څارنې نه مخنیوی وکړي</strong>. د Tor براوزر کټ مټ د نورو براوزرانو په څېر ده لکه کروم، فایرفاکس، سفاري، یاندیکس- چې په دې سره ستاسې د براوزر ټول کړه وړه د دې پر ځای چې ستاسې د انټرنېټي خدماتو وړاندې کوونکي ته په اختیار کې ورکړي او ستاسې ترافیک تر څارنې لاندې ولري، <strong>ستاسې د انټرنېټ ترافیک په یوه کوډ سره پټوي</strong> چې د دریو ناڅاپي داوطلبانه نوډونو په مټ یې دفاع کوي (چې دغو نوډونو ته «ریلي» هم وايي). دغه بهیر د دې لامل ګرځي تر څو هېڅوک پوه نه شي چې تاسې څوک یاست، چېرې یاست او چېرې ځئ (یعنې له کومې وېب پانې نه لیدنه کوئ).</p>
+
+        <p>له Tor څخه د بشر د حقونو مدافعان، فعالان او د نړۍ له ګوټ ګوټ نه هغه خلک کار اخلي کوم چې له <strong>سانسور او څارنې څخه ځانونه باسي</strong>. د دې لپاره چې د Tor په اړه لا ډېر زده کړو او دا چې هغه څرنګه کار کوي، نو د [Tor د براوزر مانول] ته ورشئ (<a href="https://tb-manual.torproject.org">https://tb-manual.torproject.org</a>).</p>
+
+      </div>
+      <div id="steps-container">
+        <div id="step1" class="parent">
+  <div class="child step-text">
+    <h2>1 پړاو: د Tor براوزر ډانلوډ کړئ</h2>
+    <p>د Tor د براوزر د ډاونلوډ لپاره تر ټولو خوندي او ساده لاره د Tor Project رسمي وېب پاڼه ده.
+<span id="os-span">For your operating system</span>, you can download <span id="browser-span">Tor Browser</span> from the link below:</p>
+
+    
+      <div id="download-tor-button">
+  <a href="https://www.torproject.org/download/" class="button"><i class="onion-glyph-download rtl-hide"></i>د Tor براوزر ډانلوډ کړئ<i class="onion-glyph-download rtl-show"></i></a>
+</div>
+    
+    
+      <details class="collapsible-text">
+        <summary class="no-marker">د Tor د براوزر په ډاونلوډ کې له ستونزې سره مخامخ یاست؟<i class="chevron-down"></i></summary>
+        <div class="details-container">
+          <p>ښايي د ځینو دلایلو له امله ونشئ کړای چې د  Tor Project وېب پاڼې ته لاسرسی ومومئ: د بېلګې په توګه هغه کېدای شي ستاسې په شبکه کې بلاک شوی وي.
+که داسې وشول، نو کولای شئ د ډاونلوډ له یوه ځایناستي میتود نه چې لاندې ترتیب شوي دي، ګټه واخلئ.</p>
+<h3>هېندارې</h3>
+<p>کولای شئ د Tor براوزر له یوې لاندنۍ رسمي هېندارې نه ډاونلوډ کړئ، یا هم:</p>
+<ul>
+<li><a href="https://tor.eff.org/">https://tor.eff.org/</a></li>
+<li><a href="http://tor.calyxinstitute.org/">http://tor.calyxinstitute.org/</a></li>
+</ul>
+<h3>GetTor</h3>
+<p>که چېرې د هېندارې سایټونه هم بلاک شوي وي، نو کولای شئ له GetTor نه د Tor براوزر د تر لاسه کولو غوښتنه وکړئ.
+GetTor هغه سرویس دی چې په اتومات ډول لینک لرونکو پیغامونو ته د Tor په وروستۍ ګڼه کې ځواب ورکوي، کوم چې په بېلابېلو ځایونو کې لکه Dropbox، Google Drive او GitHub کې یې کوربه توب کېږي:</p>
+<ul>
+<li><p><strong> 1 پړاو</strong>: دغې پتې ته gettor@torproject.org یو برېښنالیک ولیږئ او د خپل عامل سیستم له مخې، د پیغام په متن کې یوازې ولیکئ "windows", "osx" یا "linux" (د نقل قول له نښې پرته). همداشان کولای شئ د Tor براوزر د تر لاسه کولو لپاره، د یوې ژبې کوډ پرته له انګریزې اضافه کړئ. د بېلګې په توګه، د وینډوز لپاره په چینايي (چین) ژبه کې د Tor د براوزر د لینک د ډاونلوډ لپاره، gettor@torproject.org ته د "windows zh_CN" متن ولیږئ.</p>
+</li>
+<li><p><strong> 2 پړاو</strong>: GetTor به په یوه برېښنالیک سره ځواب درکړي چې له ځانه سره هغه لینکونه لري کوم چې کولای شئ د Tor د براوزر کڅوړه، د کریپتوګرافیک لاسلیک (چې د ډاونلوډ د تایید لپاره اړین ده)، د لاسلیک لپاره د ګوتې د نښان کیلي او د کڅوړې مقابله اې مجموع ترې ډاونلوډ کړئ. ښايي تاسې ته د "32 بایټي" یا "64 بایټي" یو سافټ ویر هم وړاندیز شي: چې دا ستاسې د کمپیوتر په ماډل پورې تړلی دی.</p>
+</li>
+</ul>
+<p>همداشان د لاندنیو هېندارو په کارولو سره کولای شئ نورو اسنادو او سرچینو ته لاسرسی ولرئ:</p>
+<ul>
+<li>[د Tor ملاتړیز پورتال] (<a href="https://support.tor.invidious.site/">https://support.tor.invidious.site/</a>)</li>
+<li>[د Tor د براوزر لارښود] (<a href="https://tb-manual.tor.invidious.site/">https://tb-manual.tor.invidious.site/</a>)</li>
+<li>[د Tor project وېبلاګ] (<a href="https://blog.tor.invidious.site/">https://blog.tor.invidious.site/</a>)</li>
+<li>[د Tor اصلي وېب پاڼه] (<a href="https://tor.invidious.site/">https://tor.invidious.site/</a>)</li>
+</ul>
+
+        </div>
+      </details>
+    
+  </div>
+  <div class="child">
+    <div class="circle-bg"></div>
+    <img src="../download-tor.png?h=b9322ba0">
+  </div>
+</div>
+
+<div id="step2" class="parent">
+  <div class="child step-text">
+    <h2></h2>
+    <h2>2 پړاو: له Tor سره نښلیدل</h2>
+<p>کله چې د لومړي ځل لپاره د Tor براوزر کاروئ، نو د Connect to Tor کړکۍ به ووینئ.
+دا غوراوی تاسې ته دا امکان درکوي چې مخامخ د Tor له شبکې سره ونښلئ یا هم د Tor براوزر د خپل اتصال لپاره کانفیګور کړئ.
+یو چیک باکس هم شته چې له تاسې پوښتي ایا د تل لپاره غواړئ په اتومات ډول د  Tor له شبکې سره وصل شئ؛ که داسې وي، نو پر باکس باندې نښه ووهئ.</p>
+<p>تاسې باید وکولای شئ چې د لنډې مودې لپاره د Tor د براوزر نه په ګټنې سره د پروګرام په کارولو د وېب نه لیدنه وکړئ او که چېرې د لومړي ځل لپاره له هغه نه لیدنه کوئ، نو بیا د  "Connect" پر تڼۍ کلیک وکړئ.</p>
+
+    
+    
+      <details class="collapsible-text">
+        <summary class="no-marker">له Tor سره د نښلیدو په برخه کې له ستونزې سره مخامخ یاست؟<i class="chevron-down"></i></summary>
+        <div class="details-container">
+          <p>ځینې وختونه ښايي د Tor شبکې ته ستاسې مخامخ لاسرسی ستاسې د انټرنېټې خدماتو د وړاندې کوونکي یا ستاسې د دولت له خوا بلاک شوی وي.
+ستاسې د Tor براوزر د همدې بلاکونو د شاته پرېښودو لپاره ځینې وسایل لري.
+په داسې سناریو کې، ستاسې د براوزر کانفیګور کول د یوه پل په مټ د نښلیدو لپاره په یوازې سر کفایت کوي.
+پلونه هغه ساده ریلي ګانې دي چې خصوصي دي او د هغوی بلاک کول هم ستونزمن کار دی.</p>
+<h3>د دیسکټاپ لپاره د پلونو د فعالولو د ډول څرنګوالی:</h3>
+<p>You can use a bridge in Tor Browser for desktop by going to: Settings &gt; Connection &gt; Bridges &gt; Select a Built-In Bridge.
+د 2021 کال د ډیسمبر له 22 راهیسې، هغه پلونه چې مخامخ د Tor براوزر ته رسېدل، په روسیه کې بلاک شوي دي.</p>
+<p>له همدې کبله، لوستونکي باید له لاندنیو لارو څخه د یوه له مخې د پل لپاره غوښتنلیک ورکړي:</p>
+<ul>
+<li>Requesting a bridge from within Tor Browser on desktop: Settings &gt; Connection &gt; Bridges &gt; Request a bridge from torproject.org &gt; Solve the CAPTCHA</li>
+<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridge address received manually via copy and paste in Tor Browser: Settings &gt; Connection &gt; Bridges &gt; Enter a bridge address you already know</li>
+<li>Visit <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> and follow the instructions</li>
+<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridge address received manually via copy and paste in Tor Browser: Settings &gt; Connection &gt; Bridges &gt; Enter a bridge address you already know</li>
+<li>Connecting through Snowflake from within Tor Browser: Settings &gt; Connection &gt; Bridges &gt; Select a built-in bridge &gt; Snowflake</li>
+</ul>
+<h3>د انډرویډ لپاره د پلونو د فعالولو د ډول څرنګوالی:</h3>
+<p>لوستونکي کولای شي دلته په ورتلو سره: Settings icon &gt; Config Bridge &gt; Use a bridge په انډوریډ کې له پل نه ګټه واخلي.</p>
+<p>که چېرې هغه پلونه بلاک شوي وي چې مخامخ د Tor براوزر ته رسېږي، لوستونکي باید د لاندنیو یوې لارې پر مټ پل لپاره غوښتنه وسپاري:</p>
+<ul>
+<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
+<li>Visit <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> and follow the instructions</li>
+<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
+<li>Connecting through Snowflake from within Tor Browser: Config Bridge &gt; Snowflake</li>
+</ul>
+<h3>د iOS لپاره د پلونو د فعالولو د ډول څرنګوالی:</h3>
+<p>لوستونکي کولای شي د یوې وېب پاڼې په لیدو سره د پیاز سمبول ته ورشي &gt; Bridge Configuration، او په iOS کې له پل نه ګټه واخلي.</p>
+<p>که چېرې هغه پلونه بلاک شوي وي چې مخامخ د Tor براوزر ته رسېږي، نو کولای شئ له لاندنیو لارو څخه د یوه پر مټ د پل غوښتنه وکړئ:</p>
+<ul>
+<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
+<li>Visit <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> and follow the instructions</li>
+<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
+<li>Connecting through Snowflake from within Tor Browser: Bridge Configuration &gt; Snowflake</li>
+</ul>
+
+        </div>
+      </details>
+    
+  </div>
+  <div class="child">
+    <div class="circle-bg"></div>
+    <img src="../connect-tor.png?h=550e4b7e">
+  </div>
+</div>
+
+<div id="step3" class="parent">
+  <div class="child step-text">
+    <h2></h2>
+    <h2>3 پړاو: د Onion سرویس ته لاسرسی ومومئ</h2>
+<p>د Onion سرویسونه (چې پخوا به ورته «پټ سرویسونه» ویل کېدل) داسې خدمات (لکه وېب پاڼې) دي چې یوازې د Tor شبکې له لارې د لاسرسي وړ دي.
+د نورو وېب پاڼو په څېر، تاسې باید د یوه پیازي خدماتو د پتې په اړه پوه شئ، تر څو له هغه سره ونښلئ.
+یوه پیازي پته، د هغو ناڅاپي 56 تورو او شمېرو لړۍ ده چې په دوام یې «.onion» راځي.
+د دې لپاره چې د پیازي خدماتو په اړه لا ډېر زده کړئ، نو له دې پتې لیدنه وکړئ <a href="https://tb-manual.torproject.org/onion-services">Tor Browser Manual</a>.</p>
+<p>پیازي سرویس ته د لاسرسي لپاره Крим.Реалії، دا بسنه کوي چې لاندنی URL کاپي کړئ او د Tor په براوزر کې یې پیسټ کړئ:</p>
+
+    
+      <div class="onion-url"><a href="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
+    <i class="onion-url-lock"></i>
+    <span class="onion-url-span">https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion</span>
+    <span class="onion-url-span-uncopied">پیازي پته کاپي کړئ</span>
+    <span class="onion-url-span-copied">کاپي شو!</span>
+  </a>
+  <a href="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion" class="onion-url-mobile onion-url-container" data-urlbg="#EA6903ff">
+    <i class="onion-url-lock"></i>
+    <span class="onion-url-span">د  [Service Name] .onion سایټ نه لیدنه وکړئ</span>
+    <span class="onion-url-span-uncopied">پیازي پته کاپي کړئ</span>
+    <span class="onion-url-span-copied">کاپي شو!</span>
+  </a>
+</div>
+    
+    
+  </div>
+  <div class="child">
+    <div class="circle-bg"></div>
+    <img src="../onion-services.png?h=4bae6936">
+  </div>
+</div>
+      </div>
+    </div>
+    <footer id="support-footer">
+  <div id="footer-container">
+    <img src="../support-tor.png?h=ef2d9d24">
+    <h2>ملاتړ ته اړتیا لرئ؟</h2>
+    <p>که د Tor اړوند موضوع په اړه هر ډول ملاتړ ته اړتیا لرئ، نو د Tor د ملاتړ کانال په ټیليګرام کې شته. همداشان هلته یو ځانګړی فعال فورم شته چې هر څوک کولای شي پوښتنه، نظر یا اندېښنه په کې خپره کړي.</p>
+    <div id="social-button-container">
+      <div class="social-button">
+        <a href="https://t.me/TorProjectSupportBot" class="button"><img src="../telegram-brands.svg?h=b412deed" class="rtl-hide">ّپه ټیليګرام کې ملاتړ تر لاسه کړئ<img src="../telegram-brands.svg?h=b412deed" class="rtl-show"></a>
+      </div>
+      <div class="social-button">
+        <a href="https://forum.torproject.net/" class="button"><img src="../discourse-brands.svg?h=406319ef" class="rtl-hide">د Tor د پروژې فورم نه لیدنه وکړئ<img src="../discourse-brands.svg?h=406319ef" class="rtl-show"></a>
+      </div>
+    </div>
+</footer>
+  </body>
+</html>
