@@ -184,7 +184,7 @@
      }
      .onion-url-lock {
        transform: translateY(4px);
-       filter: invert(39%) sepia(39%) saturate(2472%) hue-rotate(0deg) brightness(95%) contrast(105%);
+       filter: invert(38%) sepia(65%) saturate(7500%) hue-rotate(29deg) brightness(103%) contrast(103%);
        display: inline-block;
        background-image: url(onion-site-lock.svg?h=b66d07d8);
        width: 32px;
@@ -756,7 +756,7 @@
   <div class="child step-text">
     <h2>Крок 1: Завантажте оглядач Tor</h2>
     <p>Найбезпечніший та найшвидший шлях завантажити оглядач Tor — з офіційного сайту проєкту Tor.
-<span id="os-span">For your operating system</span>, you can download <span id="browser-span">Tor Browser</span> from the link below:</p>
+<span id="os-span">Для вашої операційної системи</span> ви можете завантажити <span id="browser-span">Браузер Tor</span> за посиланням нижче:</p>
 
     
       <div id="download-tor-button">
@@ -809,7 +809,7 @@ GetTor — це сервіс, який автоматично відповіда
 <p>Під час першого запуску оглядача Tor ви побачите вікно зі заголовком Під'єднатися до Tor.
 Це дає вам можливість або під'єднатися безпосередньо до мережі Tor, або налаштувати оглядач Tor для вашого з'єднання.
 Перед вами буде пункт з питанням, чи ви завжди хочете автоматично під'єднуватись до мережі Tor, та, якщо це так, позначте його.</p>
-<p>Ви зможете розпочати перегляд вебсторінок у Tor Browser одразу після запуску програми та натискання кнопки «Під'єднатись», якщо ви використовуєте його вперше.</p>
+<p>Ви зможете розпочати перегляд вебсторінок у браузері Tor одразу після запуску програми та натискання кнопки «Під'єднатись», якщо ви використовуєте його вперше.</p>
 
     
     
@@ -821,33 +821,35 @@ GetTor — це сервіс, який автоматично відповіда
 За подібних обставин має вистачити простого налаштування вашого оглядача для під'єднання через міст.
 Мости — це ретранслятори, що є приватними та які важче заблокувати.</p>
 <h3>Інструкції щодо активації мостів для комп'ютера:</h3>
-<p>You can use a bridge in Tor Browser for desktop by going to: Settings &gt; Connection &gt; Bridges &gt; Select a Built-In Bridge.
-Від 22 грудня 2021 року мости, що вбудовані в оглядачі Tor, блокуються у Росії.</p>
+<ul>
+<li>Ви можете використовувати мости у Браузері Tor для комп'ютера у: Налаштування &gt; З'єднання &gt; Мости &gt; Вибрати вбудований міст.
+Від 22 грудня 2021 року мости, що вбудовані в оглядачі Tor, блокуються у Росії.</li>
+</ul>
 <p>Отже, читачам потрібно робити запит на мости одним з наступних шляхів:</p>
 <ul>
-<li>Requesting a bridge from within Tor Browser on desktop: Settings &gt; Connection &gt; Bridges &gt; Request a bridge from torproject.org &gt; Solve the CAPTCHA</li>
-<li>Надішліть «/bridges» у виділений Telegram канал  <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a>  та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
+<li>Попросіть міст з браузера Tor для комп'ютера: Налаштування &gt; З'єднання &gt; Мости &gt; Запит на міст від torproject.org &gt; Розв'язати CAPTCHA</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Попросіть міст через електронну пошту: bridges@torproject.org  зі Gmail або Riseup та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
-<li>Connecting through Snowflake from within Tor Browser: Settings &gt; Connection &gt; Bridges &gt; Select a built-in bridge &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org зі Gmail або Riseup та додайте адреси мостів, копіюючи їх вручну до оглядача Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Введіть адресу моста відомого вам</li>
+<li>Під'єднайтеся через Snowflake з браузера Tor: Налаштування &gt; З'єднання &gt; Мости &gt; Обрати вбудований міст &gt; Snowflake</li>
 </ul>
 <h3>Інструкції щодо активації мостів на Android:</h3>
-<p>Читачі можуть використовувати міст для Android перейшовши до:  піктограма Налаштування &gt; Налаштувати міст &gt; Використати міст.</p>
+<p>Читачі можуть використовувати міст для Android перейшовши до: піктограма Налаштування &gt; Налаштувати міст &gt; Використати міст.</p>
 <p>У випадку, якщо усі вбудовані в оглядач Tor мости заблоковано, читачеві доведеться попросити міст одним з наступних способів:</p>
 <ul>
-<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Вказати міст, який я знаю</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Config Bridge &gt; Provide a bridge I know</li>
-<li>Connecting through Snowflake from within Tor Browser: Config Bridge &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org з пошти Gmail або Riseup і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Вказати міст, який я знаю</li>
+<li>Під'єднайтеся через Snowflake з браузера Tor: Налаштувати міст &gt; Snowflake</li>
 </ul>
 <h3>Інструкції щодо активації мостів для iOS:</h3>
 <p>Читачі можуть використовувати міст для iOS перейшовши до: піктограми Onion під час перегляду вебсайту &gt; Налаштування мосту.</p>
 <p>У випадку, якщо усі вбудовані в оглядачі Tor мости заблоковано, читачеві доведеться попросити міст одним з наступних способів:</p>
 <ul>
-<li>Sending "/bridges" to the dedicated Telegram channel <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
+<li>Надішліть «/bridges» у виділений Telegram канал <a href="https://t.me/GetBridgesBot">@GetBridgesBot</a> і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Власні мости</li>
 <li>Перейдіть на <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a> та виконайте інструкції</li>
-<li>Requesting a bridge via email: bridges@torproject.org from a Gmail or Riseup email address; and then adding the bridges lines received manually via copy and paste in Tor Browser: Bridge Configuration &gt; Custom Bridges</li>
-<li>Connecting through Snowflake from within Tor Browser: Bridge Configuration &gt; Snowflake</li>
+<li>Попросіть міст через електронну пошту: bridges@torproject.org з е-пошти Gmail або Riseup і додайте рядки з адресами мостів, копіюючи їх вручну до Браузера Tor: Налаштувати міст &gt; Власні мости</li>
+<li>Під'єднайтеся через Snowflake з браузера Tor: Налаштувати міст &gt; Snowflake</li>
 </ul>
 
         </div>
@@ -868,7 +870,7 @@ GetTor — це сервіс, який автоматично відповіда
 Як і у випадку з іншими вебсайтами, вам потрібно знати адресу служби onion для під'єднання до неї.
 Адреса onion — це адреса з 56 випадкових букв та цифр з «.onion» у кінці.
 Щоб дізнатись більше про служби Onion, відвідайте <a href="https://tb-manual.torproject.org/onion-services">Посібник оглядача Tor</a>.</p>
-<p>To access Крим.Реалії's onion service, simply copy and paste the following URL onto Tor Browser:</p>
+<p>Для доступу до служби onion Крим.Реалії просто скопіюйте та вставте таку URL-адресу до Браузера Tor:</p>
 
     
       <div class="onion-url"><a href="https://ua.krymr37vzmjc3lzijeokiaaa5scwqdveyeljh6eri4aqjqhkviv446id.onion" class="onion-url-desktop onion-url-container" data-urlbg="#EA6903ff">
@@ -909,7 +911,7 @@ GetTor — це сервіс, який автоматично відповіда
       </div>
 
       <div class="social-button">
-        <a href="https://forum.torproject.net/" class="button"><img src="discourse-brands.svg?h=3587ce10" class="rtl-hide">Tor Project forum<img src="discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
+        <a href="https://forum.torproject.net/" class="button"><img src="discourse-brands.svg?h=3587ce10" class="rtl-hide">Форум проєкту Tor<img src="discourse-brands.svg?h=3587ce10" class="rtl-show"></a>
       </div>
 
       <div class="social-button">
